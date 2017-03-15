@@ -1,0 +1,9 @@
+[submodule "relative_entropy_optimizer"]
+	path = relative_entropy_optimizer
+	url = https://github.com/truskett-group-ut/relative_entropy_optimizer.git
+[submodule "potentials"]
+	path = potentials
+	url = https://github.com/truskett-group-ut/potentials.git
+[submodule "gromacs_interface_tools"]
+	path = gromacs_interface_tools
+	url = https://github.com/truskett-group-ut/gromacs_interface_tools.git

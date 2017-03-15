@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<iter>
+<main>
+    <max_iter>999</max_iter>  <!--max number of iterations-->
+    <opt_type>RE</opt_type>
+</main>
+<simulation>
+    <package>gromacs</package>
+    <table_dr>0.005</table_dr> <!--spacing for table file-->
+</simulation>
+<potential>
+    <force_max>0.01</force_max>
+    <func_name>akima.py</func_name>
+</potential>
+</iter>

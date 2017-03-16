@@ -5,12 +5,12 @@ class XMLExtractor:
     def __init__(self):
         return None
     
-    #recursively builds a nested dictionary
+    #load in the file
     def Parse(self, filename):
         self.tree = ET.parse(filename)
         return None
 
-    #converts the xml to a nested dictionary
+    #crawls the parse tree according to key directions
     def GetText(self, *args):
         root = self.tree.getroot()
         for key in args:

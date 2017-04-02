@@ -1,12 +1,22 @@
 <?xml version="1.0"?>
 <iter>
+    
     <!--general details regarding the iteration-->
     <main>
         <max_iter>999</max_iter>  <!--max number of iterations-->
-        <opt_type>RE</opt_type>
         <code_directory>C:\Users\rbj428\Documents\research_projects\iterative_simulation_framework\</code_directory>
-    </main>    
-    <!--generic and package specific simulation details-->
+    </main>  
+    
+    <!--optimization details-->
+    <optimization>
+        <type>relative_entropy</type>
+        <relative_entropy>
+            <dr_integrate>0.005</dr_integrate>
+            <learning_rate>0.002</learning_rate>
+        </relative_entropy>
+    </optimization>
+    
+    <!--simulation details-->
     <simulation>
          <!--general simulation details-->
         <program>gromacs</program>
@@ -27,4 +37,5 @@
             </table>
         </gromacs>
     </simulation>    
+    
 </iter>

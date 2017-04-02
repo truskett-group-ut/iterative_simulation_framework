@@ -4,19 +4,23 @@
     <main>
         <max_iter>999</max_iter>  <!--max number of iterations-->
         <opt_type>RE</opt_type>
+        <code_directory>C:\Users\rbj428\Documents\research_projects\iterative_simulation_framework\</code_directory>
     </main>    
     <!--generic and package specific simulation details-->
     <simulation>
          <!--general simulation details-->
         <program>gromacs</program>
-        <potential>
-            <e_max>0.1</e_max>
-            <f_max>0.01</f_max>
-            <r_buffer>0.5</r_buffer>
-            <r_max>8.0</r_max>
-        </potential>
         <!--gromacs specific-->
         <gromacs>
+            <potential>
+                <e_max>0.1</e_max>
+                <f_max>0.01</f_max>
+                <r_max>8.0</r_max>
+                <shift>false</shift>
+            </potential>
+            <grompp>
+                <r_buffer>0.5</r_buffer>
+            </grompp>
             <table>
                 <r_max>20.0</r_max>
                 <dr>0.005</dr>

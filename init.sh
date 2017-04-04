@@ -15,17 +15,17 @@ if [ $i -eq 0 ]; then
     if [ ! -d $OLD_DIR ]; then
         mkdir $OLD_DIR
     fi
-    if [ -f params.json ]; then
-        cp params.json $OLD_DIR/params_out.json
-    elif [ -f $OLD_DIR/params.json ]; then
-        cp $OLD_DIR/params.json $OLD_DIR/params_out.json
+    if [ -f params_val.json ]; then
+        cp params_val.json $OLD_DIR/params_val_out.json
+    elif [ -f $OLD_DIR/params_val.json ]; then
+        cp $OLD_DIR/params_val.json $OLD_DIR/params_val_out.json
     fi    
 fi
 if [ ! -f $STEP_PRE"000"/done.txt ]; then
     touch $STEP_PRE"000"/done.txt
 fi
 while [ -z ${NEW_DIR+x} ]; do
-    if [ -s $OLD_DIR/params_out.json ]; then
+    if [ -s $OLD_DIR/params_val_out.json ]; then
         let i+=1
         printf -v j "%03g" $i
         NEW_DIR=$STEP_PRE$j
@@ -41,7 +41,8 @@ while [ -z ${NEW_DIR+x} ]; do
         fi
     fi
 done
-if [ ! -s $OLD_DIR/params.json ]; then
+if [ ! -s $OLD_DIR/params_val.json ]; then
+    echo "need initial parameters in file" $OLD_DIR
     exit 1    
 fi
 echo $OLD_DIR

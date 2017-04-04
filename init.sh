@@ -41,7 +41,7 @@ while [ -z ${NEW_DIR+x} ]; do
         fi
     fi
 done
-if [ ! -s $OLD_DIR/params_val.json ]; then
+if [ ! -s $OLD_DIR/params_val.json ] && [ ! -s $OLD_DIR/params_val_out.json ]; then
     echo "need initial parameters in file" $OLD_DIR
     exit 1    
 fi

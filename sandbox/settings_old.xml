@@ -5,7 +5,7 @@
     <main>
         <max_iter>999</max_iter>  <!--max number of iterations-->
         <conv_thresh>0.01</conv_thresh>
-        <code_directory>/home/beth/Desktop/Programs/iterative_simulation_framework</code_directory>
+        <code_directory>C:\Users\rbj428\Documents\research_projects\iterative_simulation_framework\</code_directory>
     </main>  
     
     <!--optimization details-->
@@ -14,32 +14,30 @@
         <relative_entropy>
             <dr_integrate>0.005</dr_integrate>
             <learning_rate>0.002</learning_rate>
-            <conv_crit>gradient</conv_crit>
-            <bin_gr>0.01</bin_gr>
+            <conv_crit>0.001</conv_crit>
         </relative_entropy>
     </optimization>
     
     <!--simulation details-->
     <simulation>
-        <num_threads>2</num_threads>
-        <!--general simulation details-->
-        <equil_time>500</equil_time>
+         <!--general simulation details-->
         <program>gromacs</program>
-        <potential>
-            <e_max>0.1</e_max>
-            <f_max>0.01</f_max>
-            <r_max>8.0</r_max>
-            <shift>false</shift>
-        </potential>
-        <table>
-            <r_max>20.0</r_max>
-            <dr>0.005</dr>
-        </table>
         <!--gromacs specific-->
         <gromacs>
-            <r_buffer>0.5</r_buffer>
+            <potential>
+                <e_max>0.1</e_max>
+                <f_max>0.01</f_max>
+                <r_max>8.0</r_max>
+                <shift>false</shift>
+            </potential>
+            <grompp>
+                <r_buffer>0.5</r_buffer>
+            </grompp>
+            <table>
+                <r_max>20.0</r_max>
+                <dr>0.005</dr>
+            </table>
         </gromacs>
     </simulation>    
     
 </iter>
-

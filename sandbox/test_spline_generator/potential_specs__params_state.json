@@ -1,0 +1,2133 @@
+{
+    "specs": {
+        "ac": "akima_cumulative"
+    }, 
+    "state": {
+        "ac__0.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.755": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.765": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.775": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.785": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.795": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.805": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.815": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.825": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.835": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.845": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.855": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.865": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.875": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.885": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.895": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.905": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.915": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.925": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.935": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.945": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.955": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.965": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.975": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.985": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__0.995": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.005": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.015": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.025": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.035": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.045": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.055": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.065": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.075": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.085": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.095": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.105": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.115": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.125": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.135": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.145": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.155": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.165": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.175": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.185": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.195": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.205": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.215": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.225": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.235": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.245": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.255": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.265": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.275": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.285": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.295": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.305": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.315": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.325": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.335": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.345": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.355": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.365": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.375": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.385": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.395": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.4": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.405": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.41": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.415": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.42": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.425": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.43": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.435": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.44": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.445": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.45": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.455": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.46": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.465": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.47": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.475": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.48": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.485": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.49": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.495": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.5": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.505": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.51": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.515": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.52": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.525": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.53": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.535": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.54": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.545": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.55": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.555": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.56": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.565": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.57": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.575": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.58": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.585": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.59": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.595": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.6": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.605": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.61": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.615": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.62": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.625": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.63": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.635": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.64": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.645": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.65": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.655": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.66": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.665": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.67": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.675": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.68": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.685": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.69": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.695": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.705": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.715": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.725": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.735": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.745": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.755": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.765": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.775": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.785": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.795": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.805": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.815": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.825": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.835": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.845": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.855": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.865": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.875": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.885": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.895": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.905": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.915": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.925": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.935": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.945": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.955": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.965": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.975": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.985": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__1.995": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.005": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.015": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.025": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.035": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.045": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.055": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.065": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.075": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.085": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.095": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.105": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.115": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.125": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.135": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.145": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.155": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.165": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.175": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.185": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.195": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.205": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.215": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.225": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.235": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.245": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.255": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.265": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.275": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.285": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.295": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.305": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.315": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.325": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.335": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.345": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.355": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.365": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.375": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.385": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.395": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.4": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.405": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.41": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.415": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.42": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.425": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.43": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.435": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.44": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.445": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.45": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.455": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.46": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.465": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.47": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.475": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.48": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.485": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.49": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.495": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.5": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.505": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.51": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.515": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.52": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.525": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.53": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.535": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.54": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.545": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.55": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.555": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.56": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.565": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.57": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.575": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.58": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.585": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.59": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.595": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.6": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.605": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.61": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.615": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.62": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.625": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.63": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.635": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.64": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.645": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.65": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.655": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.66": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.665": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.67": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.675": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.68": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.685": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.69": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.695": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.705": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.715": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.725": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.735": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.745": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.755": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.765": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.775": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.785": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.795": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.805": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.815": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.825": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.835": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.845": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.855": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.865": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.875": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.885": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.895": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.905": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.915": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.925": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.935": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.945": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.955": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.965": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.975": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.985": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__2.995": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.005": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.015": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.025": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.035": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.045": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.055": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.065": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.075": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.085": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.095": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.105": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.115": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.125": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.135": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.145": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.155": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.165": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.175": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.185": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.195": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.205": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.215": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.225": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.235": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.245": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.255": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.265": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.275": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.285": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.295": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.305": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.315": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.325": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.335": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.345": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.355": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.365": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.375": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.385": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.395": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "ac__3.4": {
+            "opt": false
+        }, 
+        "ac__3.405": {
+            "opt": false
+        }
+    }
+}

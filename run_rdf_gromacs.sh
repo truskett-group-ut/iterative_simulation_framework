@@ -1,18 +1,17 @@
 #!/bin/bash
 
-if [ $1 -lt 10 ]; then
-    ./multi_g_rdf -$1 -b $2 -e 5500 -- -bin 0.01 << 'EOF' 
-    2
-    2
-    'EOF'
-
+if [ $2 -lt 10 ]; then
+    flag='-'
 else
-    ./multi_g_rdf --$1 -b $2 -e 5500 -- -bin 0.01 << 'EOF' 
-    2
-    2
-    'EOF'
-
+    flag='--'
 fi
+
+nt=$flag$2
+
+$1/multi_g_rdf $nt -b $3 -e $4 -n ../index.ndx -- -bin 0.01 << 'EOF' 
+2
+2
+'EOF'
 
 rdf_exit=$?
 

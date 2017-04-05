@@ -6,6 +6,7 @@ from interface import prepare_simulation
 from interface import generate_update
 from contextlib import contextmanager
 import os
+from gromacs_interface_tools import gromacs_time
 
 @contextmanager
 def cd(newdir):
@@ -33,6 +34,11 @@ output = subprocess.Popen([prog_path.strip()+"/init.sh"], stdout = subprocess.PI
 work_dir=output.split("\n")
 new_dir=int(work_dir[1].lstrip('step_'))
 old_dir=int(work_dir[0].lstrip('step_'))
+end_time=gromacs_time.GromacsTime()
+
+if opt_type == "relative_entropy":
+    post_process_file="rdf.xvg"
+    post_process_script="/run_rdf_gromacs.sh"
 
 if old_dir == new_dir:
     if old_dir == 0:
@@ -41,9 +47,17 @@ if old_dir == new_dir:
         sys.exit()
     else:
         #might need to post process then need to update parameters
-        print "post process"
-        sys.exit()
-        new_dir += 1
+        with cd(cwd.strip()+'/'+work_dir[1].strip()):
+            try:
+                check_pp=subprocess.check_output(["ls", post_process_file])
+                stat_pp=0
+            except subprocess.CalledProcessError as e:
+                stat_pp=e.returncode
+            if stat_pp != 0:
+                proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
+                proc_rdf.wait()
+            generate_update.GenerateUpdate() 
+            new_dir += 1
 if old_dir+1 != new_dir:
     print old_dir, new_dir, "old and new directory are not consistent"
 
@@ -52,20 +66,16 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
     #move files around
     work_dir[1]=subprocess.Popen([prog_path.strip()+"/prepare_gromacs.sh", str(new_dir)], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
     #prepare simulation files, Ryan's python script, json & grompp are in the cwd
-    print work_dir[1]
     with cd(cwd.strip()+'/'+work_dir[1].strip()):
-        cwd2 = subprocess.Popen(["pwd"], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
-        print cwd2
         prepare_simulation.PrepareSimulation()
-        sys.exit()
         #run simulation
-        dum1=subprocess.Popen(["./run_gromacs.sh", num_threads])
+        proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads)])
+        proc.wait()
         #post process
-        if opt_type == 'relative_entropy':
-            dum1=subprocess.Popen(["./run_rdf_gromacs.sh", num_threads, equil_time])
-        else:
-            print 'opt_type not recognized'
-            sys.exit()
+        proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
+        proc_rdf.wait()
         #update parameters
-        dum1=subprocess.Popen(["./interface/generate_update.py"])
+        conv=generate_update.GenerateUpdate() 
+        print conv
+    new_dir += 1
 sys.exit()

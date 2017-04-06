@@ -7,6 +7,7 @@ from interface import generate_update
 from contextlib import contextmanager
 import os
 from gromacs_interface_tools import gromacs_time
+import csv
 
 @contextmanager
 def cd(newdir):
@@ -29,6 +30,7 @@ conv_crit_thresh=float(xml_extractor.GetText('main', 'conv_thresh'))
 opt_type=xml_extractor.GetText('optimization', 'type')
 num_threads=int(xml_extractor.GetText('simulation', 'num_threads'))
 equil_time=float(xml_extractor.GetText('simulation', 'equil_time'))
+conv_key=xml_extractor.GetText('optimization', 'relative_entropy', 'conv_crit')
 
 output = subprocess.Popen([prog_path.strip()+"/init.sh"], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
 work_dir=output.split("\n")
@@ -76,6 +78,10 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         proc_rdf.wait()
         #update parameters
         conv=generate_update.GenerateUpdate() 
-        print conv
+        conv_crit=conv[conv_key]
+        with open('conv.csv', 'wb') as f:
+            w = csv.DictWriter(f, conv.keys(), delimiter=' ') 
+            w.writerow(conv)
+        proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
     new_dir += 1
 sys.exit()

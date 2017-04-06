@@ -9,7 +9,7 @@ def MakeBool(text):
     elif re.match(r'\s*false\s*', text):
         return False
 
-def PrepareSimulation():
+def Gromacs():
     from xml_extractor import xml_extractor 
     from potentials import potential_combiner
 
@@ -33,24 +33,21 @@ def PrepareSimulation():
 
     ###########################################################################################
 
-    simulation_program = xml_extractor.GetText('simulation', 'program').strip().lower()
-    if simulation_program == 'gromacs':
-        from gromacs_interface_tools import gromacs_potential_maker
-        xmlParser = lambda x1, x2: xml_extractor.GetText('simulation', x1, x2)
+    from gromacs_interface_tools import gromacs_potential_maker
+    xmlParser = lambda x1, x2: xml_extractor.GetText('simulation', x1, x2)
 
-        #generate gromacs data
-        gromacs_potential_maker = gromacs_potential_maker.SimulationPotentialConverter()
-        gromacs_potential_maker.LoadPotential(potential, params_val)
-        gromacs_potential_maker.TabulatePotential(r_max=float(xmlParser('table', 'r_max')), 
-                                                  dr=float(xmlParser('table', 'dr'))
-                                                 )
-        gromacs_potential_maker.CutShiftTabulated(e_max=float(xmlParser('potential', 'e_max')), 
-                                                  f_max=float(xmlParser('potential', 'f_max')), 
-                                                  r_max=float(xmlParser('potential', 'r_max')), 
-                                                  shift=MakeBool(xmlParser('potential', 'shift'))
-                                                 )
-        gromacs_potential_maker.MakeTable(filename='./table.xvg')
-        gromacs_potential_maker.InsertGromppCutoff(r_buffer=float(xmlParser('gromacs', 'r_buffer')), 
-                                                   filename='./grompp.mdp')
-    else:
-        raise Exception('Invalid simulation program provided in settings file.')
+    #generate gromacs data
+    gromacs_potential_maker = gromacs_potential_maker.SimulationPotentialConverter()
+    gromacs_potential_maker.LoadPotential(potential, params_val)
+    gromacs_potential_maker.TabulatePotential(r_max=float(xmlParser('table', 'r_max')), 
+                                              dr=float(xmlParser('table', 'dr'))
+                                             )
+    gromacs_potential_maker.CutShiftTabulated(e_max=float(xmlParser('potential', 'e_max')), 
+                                              f_max=float(xmlParser('potential', 'f_max')), 
+                                              r_max=float(xmlParser('potential', 'r_max')), 
+                                              shift=MakeBool(xmlParser('potential', 'shift'))
+                                             )
+    gromacs_potential_maker.MakeTable(filename='./table.xvg')
+    gromacs_potential_maker.InsertGromppCutoff(r_buffer=float(xmlParser('gromacs', 'r_buffer')), 
+                                               filename='./grompp.mdp')
+    return None

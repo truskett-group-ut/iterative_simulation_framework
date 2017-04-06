@@ -2,7 +2,7 @@ import json
 import sys
 import re
 
-def GenerateUpdate():
+def RelativeEntropy():
     from xml_extractor import xml_extractor 
     from potentials import potential_combiner
 
@@ -26,18 +26,15 @@ def GenerateUpdate():
 
     ###########################################################################################
 
-    optimization_type = xml_extractor.GetText('optimization', 'type').strip().lower()
-    if optimization_type == 'relative_entropy':
-        from relative_entropy_optimizer import relative_entropy_update
-        xmlParser = lambda x: xml_extractor.GetText('optimization', 'relative_entropy', x)
+    #prepare the update module
+    from relative_entropy_optimizer import relative_entropy_update
+    xmlParser = lambda x: xml_extractor.GetText('optimization', 'relative_entropy', x)
 
-        #perform relative entropy update
-        relative_entropy_update = relative_entropy_update.RelativeEntropyUpdate()
-        relative_entropy_update.LoadPotential(potential, params_val)
-        relative_entropy_update.LoadRadialDistFuncs('./rdf.xvg', '../rdf_target.xvg', spacing=float(xmlParser('dr_integrate')))
-        params_val_out, conv_score = relative_entropy_update.CalcUpdate(learning_rate=float(xmlParser('learning_rate')))
-    else:
-        raise Exception('Invalid simulation program provided in settings file.')
+    #perform relative entropy update
+    relative_entropy_update = relative_entropy_update.RelativeEntropyUpdate()
+    relative_entropy_update.LoadPotential(potential, params_val)
+    relative_entropy_update.LoadRadialDistFuncs('./rdf.xvg', '../rdf_target.xvg', spacing=float(xmlParser('dr_integrate')))
+    params_val_out, conv_score = relative_entropy_update.CalcUpdate(learning_rate=float(xmlParser('learning_rate')))
 
     #write out new potential parameter values
     with open('./params_val_out.json', 'w') as data_file:      

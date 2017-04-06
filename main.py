@@ -58,7 +58,7 @@ if old_dir == new_dir:
             if stat_pp != 0:
                 proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
                 proc_rdf.wait()
-            generate_update.GenerateUpdate() 
+            generate_update.RelativeEntropy() 
             new_dir += 1
 if old_dir+1 != new_dir:
     print old_dir, new_dir, "old and new directory are not consistent"
@@ -69,7 +69,7 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
     work_dir[1]=subprocess.Popen([prog_path.strip()+"/prepare_gromacs.sh", str(new_dir)], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
     #prepare simulation files, Ryan's python script, json & grompp are in the cwd
     with cd(cwd.strip()+'/'+work_dir[1].strip()):
-        prepare_simulation.PrepareSimulation()
+        prepare_simulation.Gromacs()
         #run simulation
         proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads)])
         proc.wait()
@@ -77,7 +77,7 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
         proc_rdf.wait()
         #update parameters
-        conv=generate_update.GenerateUpdate() 
+        conv=generate_update.RelativeEntropy() 
         conv_crit=conv[conv_key]
         with open('conv.csv', 'wb') as f:
             w = csv.DictWriter(f, conv.keys(), delimiter=' ') 

@@ -4,6 +4,10 @@ if [ ! -f ../convergence.txt ]; then
     touch ../convergence.txt
 fi
 
-cat conv.csv >> ../convergence.txt
+echo $1 > conv2.csv
+paste conv2.csv conv.csv > conv3.csv
+
+cat conv3.csv >> ../convergence.txt
 rm conv.csv
+rm conv?.csv
 rm rdf_??.???

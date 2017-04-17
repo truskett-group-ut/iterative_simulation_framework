@@ -1,2 +1,4 @@
 kiddie_pool/
 *.pyc
+.ipynb_checkpoints/
+venv/

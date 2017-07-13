@@ -2,7 +2,9 @@ import json
 import sys
 import re
 
-def RelativeEntropy():
+#def RelativeEntropy():
+#takes 'dim' argument from main.py 
+def RelativeEntropy(dim):
     from xml_extractor import xml_extractor 
     from potentials import potential_combiner
 
@@ -34,7 +36,10 @@ def RelativeEntropy():
     relative_entropy_update = relative_entropy_update.RelativeEntropyUpdate()
     relative_entropy_update.LoadPotential(potential, params_val)
     relative_entropy_update.LoadRadialDistFuncs('./rdf.xvg', '../rdf_target.xvg', spacing=float(xmlParser('dr_integrate')))
-    params_val_out, conv_score = relative_entropy_update.CalcUpdate(learning_rate=float(xmlParser('learning_rate')))
+    #params_val_out, conv_score = relative_entropy_update.CalcUpdate(learning_rate=float(xmlParser('learning_rate')))
+    #wp:passes down the dimension variable
+    learning_rate=float(xmlParser('learning_rate'))
+    params_val_out, conv_score = relative_entropy_update.CalcUpdate(learning_rate,dim)
 
     #write out new potential parameter values
     with open('./params_val_out.json', 'w') as data_file:      

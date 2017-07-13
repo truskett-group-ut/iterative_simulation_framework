@@ -28,9 +28,11 @@ xml_extractor.Parse('settings.xml')
 max_iter=int(xml_extractor.GetText('main', 'max_iter'))
 conv_crit_thresh=float(xml_extractor.GetText('main', 'conv_thresh'))
 opt_type=xml_extractor.GetText('optimization', 'type')
-num_threads=int(xml_extractor.GetText('simulation', 'num_threads'))
-equil_time=float(xml_extractor.GetText('simulation', 'equil_time'))
 conv_key=xml_extractor.GetText('optimization', 'relative_entropy', 'conv_crit')
+num_threads=int(xml_extractor.GetText('simulation', 'num_threads'))
+equil_time=float(xml_extractor.GetText('simulation', 'equil_time')) 
+#wp:Allows dimension specification
+dim=int(xml_extractor.GetText('simulation', 'dimension'))
 
 output = subprocess.Popen([prog_path.strip()+"/init.sh"], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
 work_dir=output.split("\n")
@@ -56,9 +58,11 @@ if old_dir == new_dir:
             except subprocess.CalledProcessError as e:
                 stat_pp=e.returncode
             if stat_pp != 0:
-                proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
+                #proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
+                proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim)])
                 proc_rdf.wait()
-            generate_update.RelativeEntropy() 
+            #generate_update.RelativeEntropy() 
+            generate_update.RelativeEntropy(dim) 
             new_dir += 1
 if old_dir+1 != new_dir:
     print old_dir, new_dir, "old and new directory are not consistent"
@@ -73,11 +77,13 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         #run simulation
         proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads)])
         proc.wait()
-        #post process
-        proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
+        #post process #wp: argument for dimension fed to the .sh script
+        #proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
+        proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim)])
         proc_rdf.wait()
-        #update parameters
-        conv=generate_update.RelativeEntropy() 
+        #update parameters #wp:passes 'dim' argument 
+        #conv=generate_update.RelativeEntropy() 
+	conv=generate_update.RelativeEntropy(dim) 
         conv_crit=conv[conv_key]
         with open('conv.csv', 'wb') as f:
             w = csv.DictWriter(f, conv.keys(), delimiter=' ') 

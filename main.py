@@ -31,7 +31,7 @@ opt_type=xml_extractor.GetText('optimization', 'type')
 conv_key=xml_extractor.GetText('optimization', 'relative_entropy', 'conv_crit')
 num_threads=int(xml_extractor.GetText('simulation', 'num_threads'))
 equil_time=float(xml_extractor.GetText('simulation', 'equil_time')) 
-#wp:Allows dimension specification
+#wp:Allows dimension specification as integer (e.g. 2)
 dim=int(xml_extractor.GetText('simulation', 'dimension'))
 
 output = subprocess.Popen([prog_path.strip()+"/init.sh"], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
@@ -58,10 +58,8 @@ if old_dir == new_dir:
             except subprocess.CalledProcessError as e:
                 stat_pp=e.returncode
             if stat_pp != 0:
-                #proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
                 proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim)])
                 proc_rdf.wait()
-            #generate_update.RelativeEntropy() 
             generate_update.RelativeEntropy(dim) 
             new_dir += 1
 if old_dir+1 != new_dir:
@@ -78,11 +76,9 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads)])
         proc.wait()
         #post process #wp: argument for dimension fed to the .sh script
-        #proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
         proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim)])
         proc_rdf.wait()
         #update parameters #wp:passes 'dim' argument 
-        #conv=generate_update.RelativeEntropy() 
 	conv=generate_update.RelativeEntropy(dim) 
         conv_crit=conv[conv_key]
         with open('conv.csv', 'wb') as f:

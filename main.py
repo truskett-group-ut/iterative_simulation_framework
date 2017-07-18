@@ -33,18 +33,28 @@ num_threads=int(xml_extractor.GetText('simulation', 'num_threads'))
 equil_time=float(xml_extractor.GetText('simulation', 'equil_time')) 
 #wp:Allows dimension specification as integer (e.g. 2)
 dim=int(xml_extractor.GetText('simulation', 'dimension'))
+sim_prog=xml_extractor.GetText('simulation', 'program')
+sim_prog=sim_prog.lower()
 
-output = subprocess.Popen([prog_path.strip()+"/init.sh"], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
+if sim_prog == "gromacs":
+    inconfig = "conf.gro"
+    outconfig = "confout.gro"
+    end_time=gromacs_time.GromacsTime()
+else:
+    print "I don't work with simulations packages other than Gromacs v5 yet"
+
+#determine which step we are on and initialize step_000 if needed
+output = subprocess.Popen([prog_path.strip()+"/init.sh", inconfig, outconfig], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
 work_dir=output.split("\n")
 new_dir=int(work_dir[1].lstrip('step_'))
 old_dir=int(work_dir[0].lstrip('step_'))
-end_time=gromacs_time.GromacsTime()
 conv_crit = conv_crit_thresh + 1.0
 
 if opt_type == "relative_entropy":
     post_process_file="rdf.xvg"
     post_process_script="/run_rdf_gromacs.sh"
 
+#determine what (if anything) needs to happen to finish the latest step available
 if old_dir == new_dir:
     if old_dir == 0:
         #need an initial guess
@@ -78,7 +88,7 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
     with cd(cwd.strip()+'/'+work_dir[1].strip()):
         prepare_simulation.Gromacs()
         #run simulation
-        proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads)])
+        proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads), outconfig])
         proc.wait()
         #post process #wp: argument for dimension fed to the .sh script
         proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim)])

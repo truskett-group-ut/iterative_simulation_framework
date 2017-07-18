@@ -23,6 +23,15 @@ if [ $i -eq 0 ]; then
     if [ ! -f $OLD_DIR/done.txt ]; then
         touch $OLD_DIR/done.txt
     fi
+    if [ ! -f $OLD_DIR/$2 ]; then
+        if [ -f $OLD_DIR/$1 ]; then
+            cp $OLD_DIR/$1 $OLD_DIR/$2
+        elif [ -f $2 ]; then
+            cp $2 $OLD_DIR/$2
+        elif [ -f $1 ]; then
+            cp $1 $OLD_DIR/$2
+        fi
+    fi
 fi
 while [ -z ${NEW_DIR+x} ]; do
     if [ -s $OLD_DIR/params_val_out.json ]; then

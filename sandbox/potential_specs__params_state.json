@@ -1,47 +1,2933 @@
 {
-    "state": {
-        "dep__rho_p": {
-            "opt": true, 
-            "max": 6.0, 
-            "min": 0.0
-        }, 
-        "dep__d_p": {
-            "opt": true, 
-            "max": 1.0, 
-            "min": 0.0
-        }, 
-        "elec__z": {
-            "opt": true, 
-            "max": 6.0, 
-            "min": 0.0
-        }, 
-        "wca__d": {
-            "opt": false
-        }, 
-        "wca__max_ur": {
-            "opt": false
-        }, 
-        "wca__alpha": {
-            "opt": false
-        }, 
-        "wca__epsilon": {
-            "opt": true, 
-            "min": 0.2
-        }, 
-        "dep__d": {
-            "opt": false
-        }, 
-        "dep__w": {
-            "opt": false
-        }, 
-        "elec__A": {
-            "opt": true, 
-            "min": 0.0
-        }
-    }, 
     "specs": {
-        "wca": "weeks_chandler_anderson", 
-        "dep": "depletion", 
-        "elec": "electrostatic_dlvo"
+        "sp": "akima_cumulative"
+    }, 
+    "state": {
+        "sp__0.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__0.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.4": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.41": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.42": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.43": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.44": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.45": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.46": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.47": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.48": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.49": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.5": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.51": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.52": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.53": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.54": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.55": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.56": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.57": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.58": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.59": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.6": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.61": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.62": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.63": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.64": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.65": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.66": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.67": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.68": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.69": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__1.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.4": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.41": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.42": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.43": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.44": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.45": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.46": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.47": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.48": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.49": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.5": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.51": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.52": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.53": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.54": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.55": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.56": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.57": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.58": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.59": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.6": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.61": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.62": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.63": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.64": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.65": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.66": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.67": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.68": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.69": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__2.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.4": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.41": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.42": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.43": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.44": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.45": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.46": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.47": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.48": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.49": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.5": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.51": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.52": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.53": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.54": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.55": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.56": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.57": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.58": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.59": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.6": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.61": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.62": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.63": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.64": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.65": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.66": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.67": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.68": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.69": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__3.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.4": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.41": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.42": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.43": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.44": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.45": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.46": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.47": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.48": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.49": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.5": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.51": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.52": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.53": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.54": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.55": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.56": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.57": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.58": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.59": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.6": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.61": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.62": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.63": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.64": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.65": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.66": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.67": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.68": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.69": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__4.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.4": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.41": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.42": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.43": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.44": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.45": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.46": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.47": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.48": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.49": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.5": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.51": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.52": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.53": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.54": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.55": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.56": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.57": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.58": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.59": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.6": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.61": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.62": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.63": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.64": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.65": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.66": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.67": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.68": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.69": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__5.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.4": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.41": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.42": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.43": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.44": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.45": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.46": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.47": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.48": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.49": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.5": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.51": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.52": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.53": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.54": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.55": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.56": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.57": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.58": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.59": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.6": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.61": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.62": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.63": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.64": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.65": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.66": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.67": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.68": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.69": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__6.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.0": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.01": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.02": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.03": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.04": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.05": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.06": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.07": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.08": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.09": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.1": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.11": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.12": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.13": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.14": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.15": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.16": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.17": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.18": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.19": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.2": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.21": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.22": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.23": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.24": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.25": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.26": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.27": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.28": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.29": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.3": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.31": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.32": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.33": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.34": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.35": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.36": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.37": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.38": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.39": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.4": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.41": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.42": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.43": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.44": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.45": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.46": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.47": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.48": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.49": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.5": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.51": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.52": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.53": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.54": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.55": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.56": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.57": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.58": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.59": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.6": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.61": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.62": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.63": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.64": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.65": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.66": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.67": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.68": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.69": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.7": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.71": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.72": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.73": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.74": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.75": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.76": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.77": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.78": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.79": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.8": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.81": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.82": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.83": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.84": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.85": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.86": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.87": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.88": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.89": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.9": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.91": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.92": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.93": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.94": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.95": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.96": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.97": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.98": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__7.99": {
+            "min": 0.0, 
+            "opt": true
+        }, 
+        "sp__8.0": {
+            "opt": false
+        }, 
+        "sp__8.01": {
+            "opt": false
+        }
     }
 }

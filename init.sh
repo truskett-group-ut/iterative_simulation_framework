@@ -20,9 +20,9 @@ if [ $i -eq 0 ]; then
     elif [ -f $OLD_DIR/params_val.json ]; then
         cp $OLD_DIR/params_val.json $OLD_DIR/params_val_out.json
     fi    
-fi
-if [ ! -f $STEP_PRE"000"/done.txt ]; then
-    touch $STEP_PRE"000"/done.txt
+    if [ ! -f $OLD_DIR/done.txt ]; then
+        touch $OLD_DIR/done.txt
+    fi
 fi
 while [ -z ${NEW_DIR+x} ]; do
     if [ -s $OLD_DIR/params_val_out.json ]; then

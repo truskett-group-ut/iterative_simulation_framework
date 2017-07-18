@@ -37,6 +37,7 @@ work_dir=output.split("\n")
 new_dir=int(work_dir[1].lstrip('step_'))
 old_dir=int(work_dir[0].lstrip('step_'))
 end_time=gromacs_time.GromacsTime()
+conv_crit = conv_crit_thresh + 1.0
 
 if opt_type == "relative_entropy":
     post_process_file="rdf.xvg"
@@ -58,12 +59,16 @@ if old_dir == new_dir:
             if stat_pp != 0:
                 proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time)])
                 proc_rdf.wait()
-            generate_update.RelativeEntropy() 
+            conv=generate_update.RelativeEntropy() 
+            conv_crit=conv[conv_key]
+            with open('conv.csv', 'wb') as f:
+                w = csv.DictWriter(f, conv.keys(), delimiter=' ') 
+                w.writerow(conv)
+            proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
             new_dir += 1
 if old_dir+1 != new_dir:
     print old_dir, new_dir, "old and new directory are not consistent"
 
-conv_crit = conv_crit_thresh + 1.0
 while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
     #move files around
     work_dir[1]=subprocess.Popen([prog_path.strip()+"/prepare_gromacs.sh", str(new_dir)], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
@@ -84,4 +89,5 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
             w.writerow(conv)
         proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
     new_dir += 1
+print "optimization complete"
 sys.exit()

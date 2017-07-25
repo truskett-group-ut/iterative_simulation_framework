@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 #
 # Copyright 2009-2016 The VOTCA Development Team (http://www.votca.org)
 #
@@ -127,7 +127,7 @@ while [ "${1#-}" != "$1" ]; do
     single="yes"
     shift ;;
    --cmd)
-    g_cmd="$2"
+    g_cmd="gmx rdf"
     shift 2;;
    --debug)
     debug="yes"
@@ -143,14 +143,16 @@ while [ "${1#-}" != "$1" ]; do
  esac
 done
 
+g_cmd="gmx rdf"
+
 #defaults
 [ -z "$sout" ] && sout="${out%.xvg}_NP.xvg"
 [ -z "$logfile" ] && logfile="${out%.xvg}_NP.log"
 
 [ -z "$end" ] && die "-e option is missing!\nHelp with --help"
-for i in $g_cmd paste awk sed; do
-  [  -n "$(type $i)" ] || die "$i not found"
-done
+#for i in $g_cmd paste awk sed; do
+#  [  -n "$(type $i)" ] || die "$i not found"
+#done
 
 dt="$(awk -v b="$begin" -v e="$end" -v np="$np" 'BEGIN{print (e-b)/np}')"
 [ -z "$dt" ] && die "Could not calculate dt"
@@ -174,7 +176,7 @@ for ((i=0;i<$np;i++)); do
   this_log="${logfile/NP/$np0}"
   this_out="${sout/NP/$np0}"
   e="$(awk -v b="$begin" -v dt="$dt" -v i="$i" 'BEGIN{print dt*(i+1)+b}')"
-  echo -e "$input" | $g_cmd -b $b -e $e -n $index -o $this_out $* &> $this_log &
+  echo -e "$input" | $g_cmd -f traj.xtc -b $b -e $e -n $index -o $this_out $* &> $this_log &
   pid="$!"
   qecho "Calculation of $fbase from $b ps to $e ps started (pid $pid, logfile $this_log)"
   b="$e"

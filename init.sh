@@ -1,6 +1,6 @@
 #!/bin/bash
-#wp: pre-processing script to check the last partial or completed step and if not, create an initial step
-#
+# wp: pre-processing script to check the last partial or completed step and if not, create an initial step
+# input: 1. input config file (.gro) 2. output config file (.gro) 3. num of components (int)
 # first check to find the last completed step
 #
 
@@ -16,9 +16,11 @@ while [ ! -d $OLD_DIR ] && [ $i -gt 0 ]; do
     printf -v j "%03g" $i
     OLD_DIR=$STEP_PRE$j
 done
-
+#wp: config files
+inconfig=$1
+outconfig=$2
 #wp:choose procedure based on num of components
-num_components=$1
+num_components=$3
 
 if [ $num_components -eq 1 ]; then 
 	#wp: If it can't find any directories, then creates a zero calories guess
@@ -35,6 +37,16 @@ if [ $num_components -eq 1 ]; then
 	    #wp: flag to indicate old directory has undergone simulation 
 	    if [ ! -f $OLD_DIR/done.txt ]; then
 		touch $OLD_DIR/done.txt
+	    fi
+	    #wp: Manages configuration files: ensures there's a configuration file for current and next step
+	    if [ ! -f $OLD_DIR/$outconfig ]; then
+		if [ -f $OLD_DIR/$inconfig ]; then
+		    cp $OLD_DIR/$inconfig $OLD_DIR/$outconfig
+		elif [ -f $outconfig ]; then
+		    cp $outconfig $OLD_DIR/$outconfig
+		elif [ -f $inconfig ]; then
+		    cp $inconfig $OLD_DIR/$outconfig
+		fi
 	    fi
 	fi
 
@@ -97,6 +109,16 @@ elif [ $num_components -gt 1 ]; then
 	    #wp: flag to indicate old directory has undergone simulation 
 	    if [ ! -f $OLD_DIR/done.txt ]; then
 		touch $OLD_DIR/done.txt
+	    fi
+	    #wp: Manages configuration files: ensures there's a configuration file for current and next step
+	    if [ ! -f $OLD_DIR/$outconfig ]; then
+		if [ -f $OLD_DIR/$inconfig ]; then
+		    cp $OLD_DIR/$inconfig $OLD_DIR/$outconfig
+		elif [ -f $outconfig ]; then
+		    cp $outconfig $OLD_DIR/$outconfig
+		elif [ -f $inconfig ]; then
+		    cp $inconfig $OLD_DIR/$outconfig
+		fi
 	    fi
 	fi
 

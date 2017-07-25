@@ -39,15 +39,25 @@ num_components=int(xml_extractor.GetText('simulation', 'components'))
 if num_components > 26 or num_components < 1:
 	print "Must have at least one component but not more than 26 for current version. Program executed and buried."
         sys.exit()
+#wp: specifies program name e.g. gromacs
+sim_prog=xml_extractor.GetText('simulation', 'program')
+sim_prog=sim_prog.lower()
 
-#wp: pre-processing of steps
-#wp: passes down num of components for which the script will accomodate in its file processing 
-script_and_args=[prog_path.strip()+"/init.sh", str(num_components)]
+if sim_prog == "gromacs":
+    inconfig = "conf.gro"
+    outconfig = "confout.gro"
+    end_time=gromacs_time.GromacsTime()
+else:
+    print "I don't work with simulations packages other than Gromacs v5 yet"
+
+#wp: pre-processing of steps 
+#determine which step we are on and initialize step_000 if needed
+script_and_args=[prog_path.strip()+"/init.sh", inconfig, outconfig str(num_components)]
 output = subprocess.Popen(script_and_args, stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
 work_dir=output.split("\n") 
+
 new_dir=int(work_dir[1].lstrip('step_'))
 old_dir=int(work_dir[0].lstrip('step_'))
-end_time=gromacs_time.GromacsTime()
 conv_crit = conv_crit_thresh + 1.0
 
 #if opt_type == "relative_entropy":
@@ -59,6 +69,7 @@ elif opt_type == "relative_entropy" and num_components > 1:
 
 post_process_script="/run_rdf_gromacs.sh"
 
+#determine what (if anything) needs to happen to finish the latest step available
 if old_dir == new_dir:
     if old_dir == 0:
         #need an initial guess
@@ -95,7 +106,7 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
 	#wp: takes num_comp to adjust appropriate procedures
         prepare_simulation.Gromacs(num_components)
         #run simulation
-        proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads)])
+        proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads), outconfig])
         proc.wait()
         #post process: compute rdf #wp: argument for dimension fed to the .sh script
         #proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim)])

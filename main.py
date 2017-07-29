@@ -52,7 +52,7 @@ else:
 
 #wp: pre-processing of steps 
 #determine which step we are on and initialize step_000 if needed
-script_and_args=[prog_path.strip()+"/init.sh", inconfig, outconfig str(num_components)]
+script_and_args=[prog_path.strip()+"/init.sh", inconfig, outconfig, str(num_components)]
 output = subprocess.Popen(script_and_args, stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
 work_dir=output.split("\n") 
 
@@ -86,11 +86,11 @@ if old_dir == new_dir:
             if stat_pp != 0:
                 proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim),
 					str(dim), str(num_components)])
-                proc_rdf.wait()
-            conv=generate_update.RelativeEntropy(dim) 
+                proc_rdf.wait() 
+            conv=generate_update.RelativeEntropy(dim,num_components) 
             conv_crit=conv[conv_key]
             with open('conv.csv', 'wb') as f:
-                w = csv.DictWriter(f, conv.keys(), delimiter=' ') 
+                w = csv.DictWriter(f, sorted(conv.keys()), delimiter=' ') 
                 w.writerow(conv)
             proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
             new_dir += 1
@@ -109,15 +109,14 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads), outconfig])
         proc.wait()
         #post process: compute rdf #wp: argument for dimension fed to the .sh script
-        #proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim)])
         proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), 
 					str(dim), str(num_components)])
         proc_rdf.wait()
         #update parameters #wp:passes 'dim' argument and num_components; Adjusts procedure accordingly in submodules
-	conv=generate_update.RelativeEntropy(dim, num_components) 
+        conv=generate_update.RelativeEntropy(dim, num_components) 
         conv_crit=conv[conv_key]
         with open('conv.csv', 'wb') as f:
-            w = csv.DictWriter(f, conv.keys(), delimiter=' ') 
+            w = csv.DictWriter(f, sorted(conv.keys()), delimiter=' ') 
             w.writerow(conv)
         proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
     new_dir += 1

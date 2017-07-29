@@ -59,6 +59,8 @@ def RelativeEntropy(dim,num_components):
 	    num2component={1:'A',2:'B',3:'C',4:'D',5:'E',6:'F',7:'G',8:'H',9:'I',10:'J',
 	    		11:'K',12:'L',13:'M',14:'N',15:'O',16:'P',17:'Q',18:'R',19:'S',
 	    		20:'T',21:'U',22:'V',23:'W',24:'X',25:'Y',26:'Z'}
+	    #wp:Create empty directory to keep track of convergence metrics if necessary later
+	    conv_score={} 
 
 	    #wp: +1 since range goes for numbers less than max but we need to get max
 	    for i in range(1,num_components+1):
@@ -115,13 +117,19 @@ def RelativeEntropy(dim,num_components):
 		    	learning_rate=float(xmlParser('learning_rate')) 
 		    
 		    #wp:passes down the dimension variable
-		    #wp------------must work out something to do about the conv_score for each component interaction?
-		    params_val_out, conv_score = relative_entropy_update.CalcUpdate(learning_rate,dim)
+		    params_val_out, conv_score_ij = relative_entropy_update.CalcUpdate(learning_rate,dim)
+		    #wp: creates extended dictionary of 'conv_score' for every component combo
+		    for item in conv_score_ij.keys(): 
+		   	#wp: idea is to conserve one pair of keys unmodified for compatilility later
+		   	if i == num_components and j == num_components: 	
+		   	    conv_score[item]=conv_score_ij[item] 
+		   	else:
+		   	    conv_score[num2component[i]+num2component[j]+'_'+item]=conv_score_ij[item] 
 
 		    #write out new potential parameter values #wp: reflecting proper component
-		    potential_val_name_ij=potential_val_root+"_"+num2component[i]+'_'+num2component[j]+'_out'+potential_name_postfix
+		    potential_val_name_ij_out=potential_val_root+"_"+num2component[i]+'_'+num2component[j]+'_out'+potential_name_postfix
 		    #with open('./params_val_out.json', 'w') as data_file:      
-		    with open('./'+potential_val_name_ij, 'w') as data_file:      
+		    with open('./'+potential_val_name_ij_out, 'w') as data_file:      
 			json.dump(params_val_out, data_file, indent=4, sort_keys=True)
 
 		    #write out the old one but in sorted order

@@ -55,7 +55,7 @@ def Gromacs(num_components):
                                                    filename='./grompp.mdp')
         return None
     elif num_components > 1: #wp:using 'elif' rather than 'else' to avoid things like 0 and -1 etc 
-        """In order to handle multicompo stuff for n systems, standard numerical filenames will be assumed. e.g. 
+        """In order to handle multicompo stuff for n systems, standard filenames will be assumed. e.g. 
        potential_specs_params_state_A_A.json == first component  self-self interactions
        potential_specs_params_state_A_B.json == second component  cross interactions etc """
 	

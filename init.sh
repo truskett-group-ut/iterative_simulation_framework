@@ -1,6 +1,6 @@
 #!/bin/bash
 # wp: pre-processing script to check the last partial or completed step and if not, create an initial step
-# input: 1. input config file (.gro) 2. output config file (.gro) 3. num of components (int)
+# input: 1. input config file  2. output config file  3. num of components (int)
 # first check to find the last completed step
 #
 
@@ -84,7 +84,7 @@ elif [ $num_components -gt 1 ]; then
 		mkdir $OLD_DIR
 	    fi
 	    #wp: copies initial user guess of parameters to the created folder
-	    filetocheck="params_val_A_B.json" #wp: some responsability is passed onto the user to have the rest of files for now 
+	    filetocheck="params_val_B_B.json" #wp: should be the last file written given component ordered e.g. 2 2--> B_B  
 	    if [ -f $filetocheck ]; then
 		for param_i in params_val_?_?.json; do
 			#wp:picks out the file component name e.g. _A_A
@@ -123,7 +123,7 @@ elif [ $num_components -gt 1 ]; then
 	fi
 
 	#wp: operator 'z' checks if string length is 0; 
-	filetocheck2="params_val_A_B_out.json" #wp: some responsability is passed onto the user to have the rest of files for now
+	filetocheck2="params_val_B_B_out.json" #wp: some responsability is passed onto the user to have the rest of files for now
 	while [ -z ${NEW_DIR+x} ]; do
 	    #wp: operator 's' checks if file exists and has size > 0; 
 	    # If the file exists then create new directory (the next step)

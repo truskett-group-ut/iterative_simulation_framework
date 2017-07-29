@@ -1,4 +1,5 @@
 #!/bin/bash
+#wp: input: 1. num of cores (int) 2. outconfig file from simulation
 #
 if [ -f $PWD/../my_run_gromacs.sh ]; then
   $PWD/../my_run_gromacs.sh

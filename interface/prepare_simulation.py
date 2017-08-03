@@ -13,7 +13,7 @@ def Gromacs(num_components):
     """wp:Loads up potential specifications, values and writes gromacs potential table for a given number of components"""
     from xml_extractor import xml_extractor 
     from potentials import potential_combiner
-	
+    from gromacs_interface_tools import gromacs_potential_maker 
 
     if num_components == 1:
         #read in the initialization data
@@ -34,9 +34,7 @@ def Gromacs(num_components):
         xml_extractor = xml_extractor.XMLExtractor()
         xml_extractor.Parse('../settings.xml')
 
-        ###########################################################################################
-
-        from gromacs_interface_tools import gromacs_potential_maker
+        ########################################################################################### 
         xmlParser = lambda x1, x2: xml_extractor.GetText('simulation', x1, x2)
 
         #generate gromacs data
@@ -81,7 +79,6 @@ def Gromacs(num_components):
         	potential_val_name_ij=potential_val_root+"_"+num2component[i]+'_'+num2component[j]+potential_name_postfix
         
         	#read in the initialization data for each component
-        	#with open('../potential_specs__params_state.json') as data_file:    
         	with open('../'+potential_specs_name_ij) as data_file:    
         	    potential_specs__params_state = json.load(data_file)
         	    potential_specs = potential_specs__params_state['specs']
@@ -92,30 +89,27 @@ def Gromacs(num_components):
         	potential.SetParamsState(params_state)
         
         	#read in potential parameter values
-        	#with open('./params_val.json') as data_file:    
         	with open('./'+potential_val_name_ij) as data_file:    
         	    params_val = json.load(data_file)
         
         ###########################################################################################
-        	from gromacs_interface_tools import gromacs_potential_maker
         	xmlParser = lambda x1, x2: xml_extractor.GetText('simulation', x1, x2) 
         
         	#generate gromacs data #wp: for now all potentials are processed the same way 
-        	gromacs_potential_maker = gromacs_potential_maker.SimulationPotentialConverter()
-        	gromacs_potential_maker.LoadPotential(potential, params_val)
-        	gromacs_potential_maker.TabulatePotential(r_max=float(xmlParser('table', 'r_max')), 
+        	gromacs_potential_maker_ij = gromacs_potential_maker.SimulationPotentialConverter()
+        	gromacs_potential_maker_ij.LoadPotential(potential, params_val)
+        	gromacs_potential_maker_ij.TabulatePotential(r_max=float(xmlParser('table', 'r_max')), 
         						  dr=float(xmlParser('table', 'dr'))
         						 )
-        	gromacs_potential_maker.CutShiftTabulated(e_max=float(xmlParser('potential', 'e_max')), 
+        	gromacs_potential_maker_ij.CutShiftTabulated(e_max=float(xmlParser('potential', 'e_max')), 
         						  f_max=float(xmlParser('potential', 'f_max')), 
         						  r_max=float(xmlParser('potential', 'r_max')), 
         						  shift=MakeBool(xmlParser('potential', 'shift'))
         				 )
 		#wp:Creates variable name for each component table 
         	table_name_ij=table_name+"_"+num2component[i]+'_'+num2component[j]+table_postfix
-        	#gromacs_potential_maker.MakeTable(filename='./table.xvg')
-        	gromacs_potential_maker.MakeTable(filename='./'+table_name_ij)
-        	gromacs_potential_maker.InsertGromppCutoff(r_buffer=float(xmlParser('gromacs', 'r_buffer')), 
+        	gromacs_potential_maker_ij.MakeTable(filename='./'+table_name_ij)
+        	gromacs_potential_maker_ij.InsertGromppCutoff(r_buffer=float(xmlParser('gromacs', 'r_buffer')), 
         						   filename='./grompp.mdp')
         
         return None 

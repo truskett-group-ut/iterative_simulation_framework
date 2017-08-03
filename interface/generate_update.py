@@ -3,10 +3,10 @@ import sys
 import re
 
 #wp: takes 'dim' and 'num_components' argument from main.py 
-#def RelativeEntropy(dim):
 def RelativeEntropy(dim,num_components):
     from xml_extractor import xml_extractor 
     from potentials import potential_combiner
+    from relative_entropy_optimizer import relative_entropy_update
 
     if num_components == 1:
 	    #read in the initialization data
@@ -30,7 +30,6 @@ def RelativeEntropy(dim,num_components):
 	    ###########################################################################################
 
 	    #prepare the update module
-	    from relative_entropy_optimizer import relative_entropy_update
 	    xmlParser = lambda x: xml_extractor.GetText('optimization', 'relative_entropy', x)
 
 	    #perform relative entropy update
@@ -62,17 +61,18 @@ def RelativeEntropy(dim,num_components):
 	    #wp:Create empty directory to keep track of convergence metrics if necessary later
 	    conv_score={} 
 
+	    #load in xml settings
+	    xml_extractor_a = xml_extractor.XMLExtractor()
+	    xml_extractor_a.Parse('../settings.xml') 
+	    xmlParser = lambda x: xml_extractor_a.GetText('optimization', 'relative_entropy', x)
+
 	    #wp: +1 since range goes for numbers less than max but we need to get max
 	    for i in range(1,num_components+1):
 	    	for j in range(i,num_components+1): 
-		    from xml_extractor import xml_extractor 
-		    from potentials import potential_combiner
-
 		    #wp:generate file name read in the initialization data 
 		    potential_specs_name_ij=potential_name_root+"_"+num2component[i]+'_'+num2component[j]+potential_name_postfix
 		    potential_val_name_ij=potential_val_root+"_"+num2component[i]+'_'+num2component[j]+potential_name_postfix
 		    #wp:read in the initialization data
-		    #with open('../potential_specs__params_state.json') as data_file:    
 		    with open('../'+potential_specs_name_ij) as data_file:    
 			potential_specs__params_state = json.load(data_file)
 			potential_specs = potential_specs__params_state['specs']
@@ -83,30 +83,22 @@ def RelativeEntropy(dim,num_components):
 		    potential.SetParamsState(params_state)
 
 		    #read in potential parameter values
-		    #with open('./params_val.json') as data_file:    
 		    with open('./'+potential_val_name_ij) as data_file:    
 			params_val = json.load(data_file)
 
-		    #load in xml settings
-		    xml_extractor = xml_extractor.XMLExtractor()
-		    xml_extractor.Parse('../settings.xml')
-
 		    ########################################################################################### 
-		    #prepare the update module
-		    from relative_entropy_optimizer import relative_entropy_update
-		    xmlParser = lambda x: xml_extractor.GetText('optimization', 'relative_entropy', x)
+		    #prepare the update module 
 
 		    #perform relative entropy update
-		    relative_entropy_update = relative_entropy_update.RelativeEntropyUpdate()
-		    relative_entropy_update.LoadPotential(potential, params_val)
+		    relative_entropy_update_ij = relative_entropy_update.RelativeEntropyUpdate()
+		    relative_entropy_update_ij.LoadPotential(potential, params_val)
 		    #wp:generate rdf file names for each component
 		    rdf_root="rdf_"; rdf_target_root="rdf_target_";
 		    rdf_postfix=".xvg";
 		    rdf_name=rdf_root+num2component[i]+'_'+num2component[j]+rdf_postfix
 		    rdf_target_name=rdf_target_root+num2component[i]+'_'+num2component[j]+rdf_postfix 
 		     
-		    #relative_entropy_update.LoadRadialDistFuncs('./rdf.xvg', '../rdf_target.xvg', spacing=float(xmlParser('dr_integrate')))
-		    relative_entropy_update.LoadRadialDistFuncs('./'+rdf_name, '../'+rdf_target_name, spacing=float(xmlParser('dr_integrate')))
+		    relative_entropy_update_ij.LoadRadialDistFuncs('./'+rdf_name, '../'+rdf_target_name, spacing=float(xmlParser('dr_integrate')))
 		     
 		    #wp:selects learning rate for each component defined as 'learning_rate_AA' etc 
 		    learning_rate_name='learning_rate_'+num2component[i]+num2component[j] 
@@ -117,7 +109,7 @@ def RelativeEntropy(dim,num_components):
 		    	learning_rate=float(xmlParser('learning_rate')) 
 		    
 		    #wp:passes down the dimension variable
-		    params_val_out, conv_score_ij = relative_entropy_update.CalcUpdate(learning_rate,dim)
+		    params_val_out, conv_score_ij = relative_entropy_update_ij.CalcUpdate(learning_rate,dim)
 		    #wp: creates extended dictionary of 'conv_score' for every component combo
 		    for item in conv_score_ij.keys(): 
 		   	#wp: idea is to conserve one pair of keys unmodified for compatilility later
@@ -133,7 +125,6 @@ def RelativeEntropy(dim,num_components):
 			json.dump(params_val_out, data_file, indent=4, sort_keys=True)
 
 		    #write out the old one but in sorted order
-		    #with open('./params_val.json', 'w') as data_file:    
 		    with open('./'+potential_val_name_ij, 'w') as data_file:    
 			json.dump(params_val, data_file, indent=4, sort_keys=True)
 		

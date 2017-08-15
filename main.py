@@ -65,7 +65,7 @@ conv_crit = conv_crit_thresh + 1.0
 if opt_type == "relative_entropy" and num_components == 1:
     post_process_file="rdf.xvg"
 elif opt_type == "relative_entropy" and num_components > 1: 
-    post_process_file="rdf_A_B.xvg" #wp: to be modified later
+    post_process_file="rdf_B_B.xvg" #wp: to be modified later
 
 post_process_script="/run_rdf_gromacs.sh"
 

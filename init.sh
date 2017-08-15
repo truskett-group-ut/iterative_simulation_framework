@@ -78,13 +78,18 @@ if [ $num_components -eq 1 ]; then
 	    exit 1    
 	fi
 elif [ $num_components -gt 1 ]; then
+  	#wp: needed determine file to check name based on number of components. Chronological order is assumed.
+	component_name=( A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  X  Y  Z )
+        component_index=$((num_components-1))  #wp: since index start at 0
+	comp_i=${component_name[$component_index]}
 	#wp: If it can't find any directories, then creates a zero calories guess
 	if [ $i -eq 0 ]; then
 	    if [ ! -d $OLD_DIR ]; then
 		mkdir $OLD_DIR
 	    fi
-	    #wp: copies initial user guess of parameters to the created folder
-	    filetocheck="params_val_B_B.json" #wp: should be the last file written given component ordered e.g. 2 2--> B_B  
+	    #wp: should be the last file written given component ordered e.g. 2 2--> B_B
+	    filetocheck="params_val_"$comp_i"_"$comp_i".json"   
+	    #wp: copies initial user guess of parameters to the created folder 
 	    if [ -f $filetocheck ]; then
 		for param_i in params_val_?_?.json; do
 			#wp:picks out the file component name e.g. _A_A
@@ -123,7 +128,7 @@ elif [ $num_components -gt 1 ]; then
 	fi
 
 	#wp: operator 'z' checks if string length is 0; 
-	filetocheck2="params_val_B_B_out.json" #wp: some responsability is passed onto the user to have the rest of files for now
+	filetocheck2="params_val_"$comp_i"_"$comp_i"_out.json" #wp: some responsability is passed onto the user to have the rest of files for now
 	while [ -z ${NEW_DIR+x} ]; do
 	    #wp: operator 's' checks if file exists and has size > 0; 
 	    # If the file exists then create new directory (the next step)

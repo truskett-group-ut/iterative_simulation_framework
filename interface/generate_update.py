@@ -108,24 +108,31 @@ def RelativeEntropy(dim,num_components):
 		    	#wp:Assume some default value 
 		    	learning_rate=float(xmlParser('learning_rate')) 
 		    
-		    #wp:passes down the dimension variable
-		    params_val_out, conv_score_ij = relative_entropy_update_ij.CalcUpdate(learning_rate,dim)
-		    #wp: creates extended dictionary of 'conv_score' for every component combo
-		    for item in conv_score_ij.keys(): 
-		   	#wp: idea is to conserve one pair of keys unmodified for compatilility later
-		   	if i == num_components and j == num_components: 	
-		   	    conv_score[item]=conv_score_ij[item] 
-		   	else:
-		   	    conv_score[num2component[i]+num2component[j]+'_'+item]=conv_score_ij[item] 
+		    #wp:passes down the dimension variable 
+		    if learning_rate > 0: 
+		        params_val_out, conv_score_ij = relative_entropy_update_ij.CalcUpdate(learning_rate,dim)
+		        #wp: creates extended dictionary of 'conv_score' for every component combo
+		        for item in conv_score_ij.keys(): 
+		       	   #wp: idea is to conserve one pair of keys unmodified for compatilility later
+		       	   if i == num_components and j == num_components: 	
+		       	       conv_score[item]=conv_score_ij[item] 
+		       	   else:
+		       	       conv_score[num2component[i]+num2component[j]+'_'+item]=conv_score_ij[item] 
 
-		    #write out new potential parameter values #wp: reflecting proper component
-		    potential_val_name_ij_out=potential_val_root+"_"+num2component[i]+'_'+num2component[j]+'_out'+potential_name_postfix
-		    #with open('./params_val_out.json', 'w') as data_file:      
-		    with open('./'+potential_val_name_ij_out, 'w') as data_file:      
-			json.dump(params_val_out, data_file, indent=4, sort_keys=True)
+		        #write out new potential parameter values #wp: reflecting proper component
+		        potential_val_name_ij_out=potential_val_root+"_"+num2component[i]+'_'+num2component[j]+'_out'+potential_name_postfix
+		        #with open('./params_val_out.json', 'w') as data_file:      
+		        with open('./'+potential_val_name_ij_out, 'w') as data_file:      
+		            json.dump(params_val_out, data_file, indent=4, sort_keys=True) 
+		    else:
+		        #write out old potential parameter values since not assumed for update 
+		        potential_val_name_ij_out=potential_val_root+"_"+num2component[i]+'_'+num2component[j]+'_out'+potential_name_postfix
+		        with open('./'+potential_val_name_ij_out, 'w') as data_file:      
+		            json.dump(params_val, data_file, indent=4, sort_keys=True) 
+		       	
 
 		    #write out the old one but in sorted order
 		    with open('./'+potential_val_name_ij, 'w') as data_file:    
-			json.dump(params_val, data_file, indent=4, sort_keys=True)
+		        json.dump(params_val, data_file, indent=4, sort_keys=True)
 		
 	    return conv_score

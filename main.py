@@ -84,7 +84,7 @@ if old_dir == new_dir:
             except subprocess.CalledProcessError as e:
                 stat_pp=e.returncode
             if stat_pp != 0:
-                proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim),
+                proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), 
 					str(dim), str(num_components)])
                 proc_rdf.wait() 
             conv=generate_update.RelativeEntropy(dim,num_components) 

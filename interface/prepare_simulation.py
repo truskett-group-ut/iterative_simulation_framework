@@ -72,6 +72,8 @@ def Gromacs(num_components):
         		11:'K',12:'L',13:'M',14:'N',15:'O',16:'P',17:'Q',18:'R',19:'S',
         		20:'T',21:'U',22:'V',23:'W',24:'X',25:'Y',26:'Z'}
         
+        #wp: Used later to ensure maximum rc is chosen
+        rc_max_grompp=0 
         #wp: +1 since range goes for numbers less than max but we need to get max
         for i in range(1,num_components+1):
             for j in range(i,num_components+1):
@@ -108,8 +110,14 @@ def Gromacs(num_components):
         				 )
 		#wp:Creates variable name for each component table 
         	table_name_ij=table_name+"_"+num2component[i]+'_'+num2component[j]+table_postfix
-        	gromacs_potential_maker_ij.MakeTable(filename='./'+table_name_ij)
-        	gromacs_potential_maker_ij.InsertGromppCutoff(r_buffer=float(xmlParser('gromacs', 'r_buffer')), 
-        						   filename='./grompp.mdp')
+        	gromacs_potential_maker_ij.MakeTable(filename='./'+table_name_ij) 
+        	rc_max_ij=gromacs_potential_maker_ij.r_cut		
+
+		#wp: Need to ensure the *largest* rc is chosen and written to the grompp file 
+        	if  rc_max_ij > rc_max_grompp:	
+			#wp: If the ij rc cut off is greater than the previous, then write it to the grompp file. Else, keep old 
+        		rc_max_grompp=rc_max_ij		
+        		gromacs_potential_maker_ij.InsertGromppCutoff(r_buffer=float(xmlParser('gromacs', 'r_buffer')), 
+        					   filename='./grompp.mdp')
         
         return None 

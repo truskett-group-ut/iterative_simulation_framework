@@ -84,8 +84,7 @@ if old_dir == new_dir:
             except subprocess.CalledProcessError as e:
                 stat_pp=e.returncode
             if stat_pp != 0:
-                proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), 
-					str(dim), str(num_components)])
+                proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim), str(num_components)])
                 proc_rdf.wait() 
             conv=generate_update.RelativeEntropy(dim,num_components) 
             conv_crit=conv[conv_key]
@@ -99,7 +98,8 @@ if old_dir+1 != new_dir:
 
 while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
     #move files around
-    work_dir[1]=subprocess.Popen([prog_path.strip()+"/prepare_gromacs.sh", str(new_dir), str(num_components)], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
+    work_dir[1]=subprocess.Popen([prog_path.strip()+"/prepare_gromacs.sh", str(new_dir), str(num_components), prog_path.strip()], stdout = subprocess.PIPE, stderr = subprocess.STDOUT).communicate()[0]
+    work_dir[1]=re.search(r'(step_[0-9]+)',work_dir[1]).group(1)
     #prepare simulation files, Ryan's python script, json & grompp are in the cwd
     with cd(cwd.strip()+'/'+work_dir[1].strip()):
         #prepare_simulation.Gromacs()
@@ -108,9 +108,11 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         #run simulation
         proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads), outconfig])
         proc.wait()
+        output, error = proc.communicate()
+        if proc.returncode == 1:
+            sys.exit()
         #post process: compute rdf #wp: argument for dimension fed to the .sh script
-        proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), 
-					str(dim), str(num_components)])
+        proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim), str(num_components)])
         proc_rdf.wait()
         #update parameters #wp:passes 'dim' argument and num_components; Adjusts procedure accordingly in submodules
         conv=generate_update.RelativeEntropy(dim, num_components) 

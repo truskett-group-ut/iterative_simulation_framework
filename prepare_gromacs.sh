@@ -1,5 +1,5 @@
 #!/bin/bash
-#wp:input: 1. new step number (int) 2. num of components (int)
+#wp:input: 1. new step number (int) 2. num of components (int) 3. path to program (str)
 
 STEP_PRE=step_
 i=$1
@@ -8,7 +8,11 @@ NEW_DIR=$STEP_PRE$j
 let i-=1
 printf -v j "%03g" $i
 OLD_DIR=$STEP_PRE$j
-#
+
+if [ ! -s index.ndx ]; then
+    $3/make_index.sh $2
+fi
+
 mkdir $NEW_DIR
 cp $OLD_DIR/confout.gro $NEW_DIR/conf.gro
 

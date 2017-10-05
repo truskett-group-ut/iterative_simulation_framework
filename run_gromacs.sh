@@ -17,10 +17,10 @@ else
 	  touch done.txt
 	else
 	  echo "gromacs crashed for some reason, consult the log file" 
-	  exit 
+	  exit 1 
 	fi 
   else
 	echo "Grompp failed. Check your input"
-	exit;
+	exit 1;
   fi
 fi

@@ -90,7 +90,7 @@ if old_dir == new_dir:
             if stat_pp != 0:
                 proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim), str(num_components)])
                 proc_rdf.wait() 
-            conv=generate_update.RelativeEntropy(dim,num_components) 
+            conv=generate_update.RelativeEntropy(dim, num_components, ensemble) 
             conv_crit=conv[conv_key]
             with open('conv.csv', 'wb') as f:
                 w = csv.DictWriter(f, sorted(conv.keys()), delimiter=' ') 

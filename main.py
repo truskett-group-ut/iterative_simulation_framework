@@ -23,6 +23,7 @@ cwd = subprocess.Popen(["pwd"], stdout = subprocess.PIPE, stderr = subprocess.ST
 with open('settings.xml', 'r') as outfile:  
     prog_path = re.search(r'<code_directory>(.+)</code_directory>', outfile.read()).group(1)
 
+#extract the various parameters and setttings
 xml_extractor=xml_extractor.XMLExtractor()
 xml_extractor.Parse('settings.xml')
 max_iter=int(xml_extractor.GetText('main', 'max_iter'))
@@ -35,10 +36,13 @@ equil_time=float(xml_extractor.GetText('simulation', 'equil_time'))
 dim=int(xml_extractor.GetText('simulation', 'dimension'))
 #wp: Takes in number of components  as int
 num_components=int(xml_extractor.GetText('simulation', 'components'))
+#rbj: can now run NPT as well as NVT
+ensemble=xml_extractor.GetText('simulation', 'ensemble')
+
 #wp: Given how extensively the num of components arguments is used, need to ensure it's a valid option or else quit everything
 if num_components > 26 or num_components < 1:
-	print "Must have at least one component but not more than 26 for current version. Program executed and buried."
-        sys.exit()
+    print "Must have at least one component but not more than 26 for current version. Program executed and buried."
+    sys.exit()
 #wp: specifies program name e.g. gromacs
 sim_prog=xml_extractor.GetText('simulation', 'program')
 sim_prog=sim_prog.lower()
@@ -103,7 +107,7 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
     #prepare simulation files, Ryan's python script, json & grompp are in the cwd
     with cd(cwd.strip()+'/'+work_dir[1].strip()):
         #prepare_simulation.Gromacs()
-	#wp: takes num_comp to adjust appropriate procedures
+        #wp: takes num_comp to adjust appropriate procedures
         prepare_simulation.Gromacs(num_components)
         #run simulation
         proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads), outconfig])
@@ -115,7 +119,7 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim), str(num_components)])
         proc_rdf.wait()
         #update parameters #wp:passes 'dim' argument and num_components; Adjusts procedure accordingly in submodules
-        conv=generate_update.RelativeEntropy(dim, num_components) 
+        conv=generate_update.RelativeEntropy(dim, num_components, ensemble) 
         conv_crit=conv[conv_key]
         with open('conv.csv', 'wb') as f:
             w = csv.DictWriter(f, sorted(conv.keys()), delimiter=' ') 

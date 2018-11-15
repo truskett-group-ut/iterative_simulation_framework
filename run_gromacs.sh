@@ -4,6 +4,7 @@
 
 nt=$1
 outconfig_file=$2 
+ensemble=$3
 
 if [ -f $PWD/../my_run_gromacs.sh ]; then
   $PWD/../my_run_gromacs.sh
@@ -15,6 +16,10 @@ else
 	gmx mdrun -nt $nt -x traj.xtc -g 
 	if [ -f $outconfig_file ]; then
 	  touch done.txt
+          if [ $3 = "NPT" ]; then
+            echo "Density" >> done.txt
+            echo "   " >> done.txt
+          fi
 	else
 	  echo "gromacs crashed for some reason, consult the log file" 
 	  exit 1 

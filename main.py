@@ -110,11 +110,15 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         #wp: takes num_comp to adjust appropriate procedures
         prepare_simulation.Gromacs(num_components)
         #run simulation
-        proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads), outconfig])
+        proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads), outconfig, ensemble])
         proc.wait()
         output, error = proc.communicate()
         if proc.returncode == 1:
             sys.exit()
+        #if NPT, need to calculate rho
+        if ensemble == "NPT": #gonna need to make a special case for 2D
+	    proc_rho=subprocess.Popen([prog_path.strip()+"/calc_rho_gromacs.sh", str(equil_time), str(dim)])
+            proc_rho.wait()    
         #post process: compute rdf #wp: argument for dimension fed to the .sh script
         proc_rdf=subprocess.Popen([prog_path.strip()+post_process_script, prog_path.strip(), str(num_threads), str(equil_time), str(end_time), str(dim), str(num_components)])
         proc_rdf.wait()

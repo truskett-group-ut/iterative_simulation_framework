@@ -11,4 +11,3 @@ cat conv3.csv >> ../convergence.txt
 rm conv.csv
 rm conv?.csv
 rm rdf_??.???
-rm rho.dat

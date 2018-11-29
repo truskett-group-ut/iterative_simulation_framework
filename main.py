@@ -8,6 +8,7 @@ from contextlib import contextmanager
 import os
 from gromacs_interface_tools import gromacs_time
 import csv
+import time
 
 @contextmanager
 def cd(newdir):
@@ -98,9 +99,9 @@ if old_dir == new_dir:
             with open('conv.csv', 'wb') as f:
                 w = csv.DictWriter(f, sorted(conv.keys()), delimiter=' ') 
                 w.writerow(conv)
-            proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
             learning_rate=xml_extractor.GetText('optimization', 'relative_entropy', 'learning_rate')
-            procLR=subprocess.Popen([prog_path.strip()+"/update_learning_rate.sh", str(learning_rate), str(learning_rate_min), str(learning_rate_max)])
+            procLR=subprocess.Popen([prog_path.strip()+"/update_learning_rate.sh", str(learning_rate), str(learning_rate_min), str(learning_rate_max), str(conv['rdf_diff'])])
+            proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
             new_dir += 1
 if old_dir+1 != new_dir:
     print old_dir, new_dir, "old and new directory are not consistent"
@@ -133,9 +134,9 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         with open('conv.csv', 'wb') as f:
             w = csv.DictWriter(f, sorted(conv.keys()), delimiter=' ') 
             w.writerow(conv)
-        proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
         learning_rate=xml_extractor.GetText('optimization', 'relative_entropy', 'learning_rate')
-        procLR=subprocess.Popen([prog_path.strip()+"/update_learning_rate.sh", str(learning_rate), str(learning_rate_min), str(learning_rate_max)])
+        procLR=subprocess.Popen([prog_path.strip()+"/update_learning_rate.sh", str(learning_rate), str(learning_rate_min), str(learning_rate_max), str(conv['rdf_diff'])])
+        proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
     new_dir += 1
 print "optimization complete"
 sys.exit()

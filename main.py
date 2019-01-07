@@ -99,6 +99,7 @@ if old_dir == new_dir:
             with open('conv.csv', 'wb') as f:
                 w = csv.DictWriter(f, sorted(conv.keys()), delimiter=' ') 
                 w.writerow(conv)
+            xml_extractor.Parse('../settings.xml')
             learning_rate=xml_extractor.GetText('optimization', 'relative_entropy', 'learning_rate')
             procLR=subprocess.Popen([prog_path.strip()+"/update_learning_rate.sh", str(learning_rate), str(learning_rate_min), str(learning_rate_max), str(conv['rdf_diff'])])
             proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])
@@ -114,6 +115,12 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
     with cd(cwd.strip()+'/'+work_dir[1].strip()):
         #prepare_simulation.Gromacs()
         #wp: takes num_comp to adjust appropriate procedures
+        try:
+            f = open('../settings.xml', 'r')
+        except IOError as e:
+            print("Couldn't open or write to file (%s)." % e)
+        finally:
+            if f: f.close()
         prepare_simulation.Gromacs(num_components)
         #run simulation
         proc=subprocess.Popen([prog_path.strip()+"/run_gromacs.sh", str(num_threads), outconfig, ensemble])
@@ -134,6 +141,7 @@ while new_dir <= max_iter and conv_crit >= conv_crit_thresh:
         with open('conv.csv', 'wb') as f:
             w = csv.DictWriter(f, sorted(conv.keys()), delimiter=' ') 
             w.writerow(conv)
+        xml_extractor.Parse('../settings.xml')
         learning_rate=xml_extractor.GetText('optimization', 'relative_entropy', 'learning_rate')
         procLR=subprocess.Popen([prog_path.strip()+"/update_learning_rate.sh", str(learning_rate), str(learning_rate_min), str(learning_rate_max), str(conv['rdf_diff'])])
         proc_cleanup=subprocess.Popen([prog_path.strip()+"/run_clean_up.sh", str(new_dir)])

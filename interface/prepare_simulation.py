@@ -1,6 +1,7 @@
 import json
 import sys
 import re
+from time import sleep
 
 def MakeBool(text):
     text = text.lower()
@@ -32,7 +33,16 @@ def Gromacs(num_components):
 
         #load in xml settings
         xml_extractor = xml_extractor.XMLExtractor()
-        xml_extractor.Parse('../settings.xml')
+        for x in range (0, 10):
+            try:
+                xml_extractor.Parse('../settings.xml')
+                str_error = None
+            except Exception as str_error:
+                pass
+            if str_error:
+                sleep(15)
+            else:
+                break
 
         ########################################################################################### 
         xmlParser = lambda x1, x2: xml_extractor.GetText('simulation', x1, x2)
